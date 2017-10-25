@@ -1,0 +1,38 @@
+Physics
+
+1. Simplified Orbit
+Motion of moon around earth in Cartesian coordinate (x-y)
+The position of earth is the origin of the coordinate
+The trajectory of moon is:
+x=D*cos(2*pi*t/T)
+y=D*sin(2*pi*t/T)
+where D is the distance between moon and earth (assuming it is a circle orbit, D is constant), D=4*10^8 meter
+where t is the time experienced
+where T is the orbit period of moon travelling around earth, in this case, using T=27 days
+
+2. Newton's Second Law
+F=m*a=m*x''
+where F is the force exerted on the object, N
+where m is the mass of the object, kg
+where a is the acceleration of the object, m/s^2
+where x'' is the second derivative of the distance that object travelled, which is equal to the acceleration of the object
+
+3. Forward Euler Method
+x(delta_t)=x(0)+(delta_t-0)*v(delta_t-0)
+v(delta_t)=v(0)+(delta_t-0)*a(delta_t-0)
+x(2*delta_t)=x(delta_t)+(2*delta_t-delta_t)*v(2*delta_t-delta_t)
+v(2*delta_t)=v(delta_t)+(2*delta_t-delta_t)*a(2*delta_t-delta_t)
+where delta_t is a small time step
+
+4. Newton's Law of Gravitation
+Fg=GMm/R^2
+where Fg is the force of gravity, N
+where G is a constant, 6.67*10^-11 Nm^2/kg^2
+where M and m is the mass of earth and moon, kg.  m=7.3*10^22 kg
+where R is the distance between earth and moon, m
+
+5. Shell Theorem
+Shell sphere radius=R, mass=M, volumn=V, area=A, force=F
+Core sphere radius=R/2, thus area=(1/2)^2*A, volumn=(1/2)^3*V, mass=(1/2)^3*M
+Shell F=GMm/R^2
+Core F=G(M/8)m/(R/4)=F/2
